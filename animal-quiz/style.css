@@ -1,0 +1,104 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.quiz-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.quiz-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#silhouette-image {
+    max-width: 30%; /* ここを80%から70%に変更 */
+    height: auto;
+    margin-bottom: 30px;
+    background-color: #eee; /* 画像がまだない場合のプレースホルダー */
+    border-radius: 5px;
+    padding: 10px; /* 見栄えのため */
+}
+
+.choices {
+    display: flex;
+    flex-wrap: wrap; /* 小さい画面でボタンが折り返すように */
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.choice-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1 1 calc(33% - 20px); /* 3つ横並び、隙間を考慮 */
+    min-width: 120px; /* ボタンの最小幅 */
+}
+
+.choice-button:hover {
+    background-color: #0056b3;
+}
+
+.choice-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#feedback-message {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    min-height: 24px; /* メッセージ表示領域の確保 */
+}
+
+#next-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    display: none; /* 初期状態では非表示 */
+}
+
+#next-button:hover {
+    background-color: #218838;
+}
+
+/* 正解・不正解時の色 */
+.correct {
+    color: #28a745;
+}
+
+.wrong {
+    color: #dc3545;
+}
